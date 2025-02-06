@@ -7,8 +7,27 @@ on:
 
 jobs:
   say-hello:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
       - name: Print Hello World
         run: echo "Hello, World!"
+
+      - name: Verificar condição
+        id: check_condition
+        run: |
+          # Exemplo de condição: verificar se a variável de ambiente "TEST_CONDITION" é "true"
+          if [ "$TEST_CONDITION" = "true" ]; then
+            echo "Condição atendida: sucesso!"
+            exit 0  # Sucesso
+          else
+            echo "Condição não atendida: falha!"
+            exit 1  # Falha
+          fi
+
+      - name: Resultado
+        if: steps.check_condition.outcome == 'success'
+        run: echo "O workflow foi bem-sucedido!"
