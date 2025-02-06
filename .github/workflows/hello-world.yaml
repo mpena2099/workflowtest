@@ -21,6 +21,7 @@ jobs:
       - name: Verificar condição
         id: check_condition
         run: |
+          echo "Valor de TEST_CONDITION: '$TEST_CONDITION'"
           # Exemplo de condição: verificar se a variável de ambiente "TEST_CONDITION" é "true"
           if [ "$TEST_CONDITION" == "true" ]; then
             echo "Condição atendida: sucesso!"
