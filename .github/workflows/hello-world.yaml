@@ -31,6 +31,6 @@ jobs:
             exit 1  # Falha
           fi
 
-      - name: Resultado
-        if: steps.check_condition.outcome == 'success'
-        run: echo "O workflow foi bem-sucedido!"
+      # - name: Resultado
+      #   if: steps.check_condition.outcome == 'success'
+      #   run: echo "O workflow foi bem-sucedido!"
