@@ -8,6 +8,8 @@ on:
 jobs:
   say-hello:
     runs-on: ubuntu-20.04
+    env:
+      TEST_CONDITION: ${{ vars.TEST_CONDITION }}  # Acessa a variável do repositório
 
     steps:
       - name: Checkout do código
@@ -20,7 +22,7 @@ jobs:
         id: check_condition
         run: |
           # Exemplo de condição: verificar se a variável de ambiente "TEST_CONDITION" é "true"
-          if [ "$TEST_CONDITION" = "true" ]; then
+          if [ "$TEST_CONDITION" == "true" ]; then
             echo "Condição atendida: sucesso!"
             exit 0  # Sucesso
           else
