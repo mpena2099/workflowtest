@@ -1,6 +1,9 @@
 name: catkin_lint
 on:
-  [pull_request]
+#  [pull_request]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
