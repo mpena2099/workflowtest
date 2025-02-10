@@ -106,6 +106,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES workflowtest
 #  CATKIN_DEPENDS roscpp rospy std_msgs
+ CATKIN_DEPENDS roscpp std_msgs
 #  DEPENDS system_lib
 )
 

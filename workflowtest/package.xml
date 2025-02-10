@@ -2,7 +2,7 @@
 <package format="2">
   <name>workflowtest</name>
   <version>0.0.0</version>
-  <description>The workflowtest package</description>
+  <description>O pacote workflowtest contém nodes e scripts para testar workflows de CI/CD no ROS.</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
