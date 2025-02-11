@@ -5,12 +5,12 @@ on:
   #   branches:
   #     - main
     paths:
-      - 'workflowtest/src/**'
-      - 'workflowtest/src/**/package.xml'
-      - 'workflowtest/src/**/CMakeLists.txt'
-      - 'workflowtest/src/**/*.launch'
-      - 'workflowtest/src/**/*.urdf'
-      - 'workflowtest/src/**/*.xacro'
+      - 'workflowtest/**'
+      - 'workflowtest/**/package.xml'
+      - 'workflowtest/**/CMakeLists.txt'
+      - 'workflowtest/**/*.launch'
+      - 'workflowtest/**/*.urdf'
+      - 'workflowtest/**/*.xacro'
 
 jobs:
   build:
