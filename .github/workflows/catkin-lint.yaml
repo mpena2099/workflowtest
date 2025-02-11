@@ -6,11 +6,6 @@ on:
   #     - main
     paths:
       - 'workflowtest/**'
-      - 'workflowtest/**/package.xml'
-      - 'workflowtest/**/CMakeLists.txt'
-      - 'workflowtest/**/*.launch'
-      - 'workflowtest/**/*.urdf'
-      - 'workflowtest/**/*.xacro'
 
 jobs:
   build:
