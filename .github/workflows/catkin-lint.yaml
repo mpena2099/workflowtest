@@ -1,9 +1,16 @@
 name: catkin_lint
 on:
-  [pull_request]
+  pull_request:
   # push:
   #   branches:
   #     - main
+    paths:
+      - 'catkin_ws/src/**'
+      - 'catkin_ws/src/**/package.xml'
+      - 'catkin_ws/src/**/CMakeLists.txt'
+      - 'catkin_ws/src/**/*.launch'
+      - 'catkin_ws/src/**/*.urdf'
+      - 'catkin_ws/src/**/*.xacro'
 
 jobs:
   build:
